@@ -16,23 +16,38 @@
             <span class="brand">Precios Norvet Mascotas</span>
         </div>
         <div class="toolbar-right">
-            <!-- Este link descarga el archivo directamente -->
             <a href="catalogo.pdf" download class="btn-download">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Descargar PDF
+                <span>Descargar PDF</span>
             </a>
         </div>
     </header>
 
-    <!-- Contenedor del visor de PDF -->
+    <!-- Contenedor principal -->
     <main class="pdf-container">
-        <!-- Usamos el Visor de Google para que se vea DIRECTO en celulares sin dar clic en Abrir -->
-        <iframe 
-            src="https://docs.google.com/viewer?url=https://daniiel06.github.io/talogo-pdf/catalogo.pdf&embedded=true" 
-            frameborder="0">
-        </iframe>
+        
+        <!-- VISTA PARA PC (Se muestra en pantallas grandes) -->
+        <div class="pdf-viewer">
+            <iframe 
+                src="catalogo.pdf#toolbar=0" 
+                frameborder="0">
+            </iframe>
+        </div>
+
+        <!-- VISTA PARA MÓVIL (Se muestra en pantallas pequeñas) -->
+        <div class="mobile-overlay">
+            <div class="mobile-content">
+                <svg class="mobile-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <p>Para una mejor experiencia en tu dispositivo móvil:</p>
+                <a href="catalogo.pdf" target="_blank" class="btn-open">
+                    📖 Ver Catálogo Ahora
+                </a>
+            </div>
+        </div>
+
     </main>
 
 </body>
 </html>
+
 
