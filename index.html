@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Digital | Vista Previa</title>
+    <title>Precios Norvet Mascotas</title>
     <link rel="stylesheet" href="style.css">
     <!-- Importamos una fuente moderna de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -13,9 +13,10 @@
     <!-- Barra de herramientas superior -->
     <header class="toolbar">
         <div class="toolbar-left">
-            <span class="brand"> Precios Norvet Mascotas</span>
+            <span class="brand">Precios Norvet Mascotas</span>
         </div>
         <div class="toolbar-right">
+            <!-- Este link descarga el archivo directamente -->
             <a href="catalogo.pdf" download class="btn-download">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Descargar PDF
@@ -25,14 +26,13 @@
 
     <!-- Contenedor del visor de PDF -->
     <main class="pdf-container">
-        <iframe src="catalogo.pdf#toolbar=0" frameborder="0"></iframe>
+        <!-- Usamos el Visor de Google para que se vea DIRECTO en celulares sin dar clic en Abrir -->
+        <iframe 
+            src="https://docs.google.com/viewer?url=https://daniiel06.github.io/talogo-pdf/catalogo.pdf&embedded=true" 
+            frameborder="0">
+        </iframe>
     </main>
 
-    <script>
-        // Pequeño script para manejar la carga
-        window.onload = function() {
-            console.log("Catálogo cargado correctamente");
-        };
-    </script>
 </body>
 </html>
+
